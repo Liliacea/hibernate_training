@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Model.Position" schema="public" table="role">
+        <id name="id" column="id" type="int">
+            <generator class="native"></generator>
+        </id>
+        <property name="title" column="title" type="string"/>
+        <set name="usersSet" table="users_role">
+            <key column ="role_id" />
+
+            <many-to-many column="user_id" class="Model.users"/>
+        </set>
+    </class>
+</hibernate-mapping>

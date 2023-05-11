@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL81Dialect</property>
+    <property name="connection.url">jdbc:postgresql://localhost:5434/postgres</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">mypass</property>
+    <property name="show_sql">true</property>
+    <property name="hbm2ddl.auto">create</property>
+
+
+    <mapping class="Model.Position"/>
+    <mapping class="Model.users"/>
+    <mapping class="Model.Order"/>
+    <mapping class="Model.Product"/>
+    <mapping class="Model.ProductCategory"/>
+    <mapping class="Model.Position"/>
+
+
+
+
+
+
+
+
+
+  </session-factory>
+
+
+
+</hibernate-configuration>
